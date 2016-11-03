@@ -96,3 +96,19 @@ function! s:VSetSearch()
   let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
   let @s = temp
 endfunction
+
+"设置VIM状态栏 
+set laststatus=2 "显示状态栏(默认值为1, 无法显示状态栏) 
+set statusline= 
+set statusline+=%2*%-3.3n%0*\  "buffernumber 
+set statusline+=%F\ " file name 
+set statusline+=%h%1*%m%r%w%0* " flag 
+set statusline+=%= " right align 
+set statusline+=[ 
+if v:version >= 600 
+	set statusline+=%{strlen(&ft)?&ft:'none'}, " filetype 
+	set statusline+=%{&fileencoding}, " encoding 
+endif 
+set statusline+=%{&fileformat}]\ \  " file format 
+"set statusline+=0x%-8B\ " current char 
+set statusline+=%-10.(%l,%c%V%)\ %<%P " offset 
