@@ -122,7 +122,7 @@ set backupext=.bak
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 "设置修改原始文件时保留一个原始文件备份
-set patchmode=.origin_bak
+"set patchmode=.origin_bak
 "set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set fileencodings=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936,utf-16,big5,euc-jp,latin1
