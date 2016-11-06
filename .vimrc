@@ -110,7 +110,7 @@ if v:version >= 600
 	set statusline+=%{&fileencoding}, " encoding 
 endif 
 set statusline+=%{&fileformat}]\ \  " file format 
-"set statusline+=0x%-8B\ " current char 
+set statusline+=0x%-8B\ " current char 
 set statusline+=%-10.(%l,%c%V%)\ %<%P " offset 
 
 "设置备份
